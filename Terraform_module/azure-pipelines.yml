@@ -1,0 +1,24 @@
+trigger:
+- master
+
+pool: agent-local
+
+steps:
+
+- script: |
+    terraform init
+    terraform plan -out=tfplan
+    terraform show --json tfplan > tfplan.json
+- task: SnykSecurityScan@1
+<<<<<<< HEAD
+=======
+  inputs:
+    serviceConnectionEndpoint: 'Snyk-Terraform-Test'
+    testType: 'app'
+    # targetFile: '/home/knoldus/Downloads/myagent/_work/7/s/main.tf'
+    monitorWhen: 'always'
+    failOnIssues: true
+    projectName: 'Terraform with Snyk'
+    organization: 'VikasVashisth'
+  displayName: 'Snyk Pipeline'
+>>>>>>> 97a3b945c4408a463da283229a41ace99e3ea5f5

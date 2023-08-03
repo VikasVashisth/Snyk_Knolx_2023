@@ -1,0 +1,19 @@
+Pre-requisite 
+
+1. Terraform Install
+2. Docker Install
+3. Azure Cli Install
+4. ADO Agent Install and Configure
+
+
+ Commands to Install snyk
+
+1.sudo apt update && sudo apt upgrade
+2.sudo apt install npm -y
+sudo npm install snyk -g
+3.sudo npm install snyk -g --unsafe-perm
+4.snyk -v
+
+5.snyk config set api=*******************************
+snyk auth
+
